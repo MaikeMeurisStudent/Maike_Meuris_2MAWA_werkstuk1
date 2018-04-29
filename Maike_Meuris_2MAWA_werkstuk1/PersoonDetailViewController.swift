@@ -9,7 +9,11 @@
 import UIKit
 import MapKit
 
-class ViewController: UIViewController, MKMapViewDelegate {
+class PersoonDetailViewController: UIViewController, MKMapViewDelegate {
+    
+    @IBAction func imageClicked(_ sender: Any) {
+        performSegue(withIdentifier: "naarFotoDetail", sender: self)
+    }
     
     var locationManager = CLLocationManager()
     
@@ -47,6 +51,14 @@ class ViewController: UIViewController, MKMapViewDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "naarFotoDetail" {
+            if let nextVC = segue.destination as? FotoDetailViewController {
+                nextVC.doorgegevenFoto = persoon!.foto
+            }
+        }
     }
 
 

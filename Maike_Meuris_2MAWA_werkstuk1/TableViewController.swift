@@ -109,7 +109,7 @@ class TableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "naarDetailView" {
-            if let nextVC = segue.destination as? ViewController {
+            if let nextVC = segue.destination as? PersoonDetailViewController {
                 nextVC.persoon = geselecteerdePersoon
                 print("persoon werd doorgestuurd")
                 //print(geselecteerdePersoon!.voornaam)
