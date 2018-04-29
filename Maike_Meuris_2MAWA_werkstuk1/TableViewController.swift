@@ -7,24 +7,35 @@
 //
 
 import UIKit
+import MapKit
 
 class TableViewController: UITableViewController {
     
     var personen = [Persoon]()
+    var geselecteerdePersoon:Persoon?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var adres1 = Adres(straat: "Fontainasstraat", huisnummer: "12A", postcode: "1060", gemeente: "Sint-Gillis")
-        var coordinaat1 = Coordinaat(latitude: 1, longitude: 2)
+        let adres1 = Adres(straat: "Fontainasstraat", huisnummer: "12", postcode: "1060", gemeente: "Sint-Gillis")
+        let coordinaat1 = CLLocationCoordinate2D(latitude: 50.833038, longitude: 4.341547)
         
-        personen.append(Persoon(naam: "Meuris", voornaam: "Maike", foto: UIImage(named: "woman")!, adres: adres1, gpsCoordinaat: coordinaat1, telefoonnummer: "0478945783"))
+        let adres2 = Adres(straat: "Rue Émile Féron", huisnummer: "19", postcode: "1060", gemeente: "Sint-Gillis")
+        let coordinaat2 = CLLocationCoordinate2D(latitude: 50.833650, longitude: 4.340094)
         
-        personen.append(Persoon(naam: "Meuris", voornaam: "Maike", foto: UIImage(named: "woman")!, adres: adres1, gpsCoordinaat: coordinaat1, telefoonnummer: "0478945783"))
+        let adres3 = Adres(straat: "Chaussée de Forest", huisnummer: "24", postcode: "1060", gemeente: "Sint-Gillis")
+        let coordinaat3 = CLLocationCoordinate2D(latitude: 50.832263, longitude: 4.342198)
         
-        personen.append(Persoon(naam: "Meuris", voornaam: "Maike", foto: UIImage(named: "woman")!, adres: adres1, gpsCoordinaat: coordinaat1, telefoonnummer: "0478945783"))
+        let adres4 = Adres(straat: "Fontainasstraat", huisnummer: "7", postcode: "1060", gemeente: "Sint-Gillis")
+        let coordinaat4 = CLLocationCoordinate2D(latitude: 50.833128, longitude: 4.341987)
         
-        personen.append(Persoon(naam: "Meuris", voornaam: "Maike", foto: UIImage(named: "woman")!, adres: adres1, gpsCoordinaat: coordinaat1, telefoonnummer: "0478945783"))
+        personen.append(Persoon(naam: "Meuris", voornaam: "Maike", foto: UIImage(named: "woman1")!, adres: adres1, gpsCoordinaat: coordinaat1, telefoonnummer: "0478945783"))
+        
+        personen.append(Persoon(naam: "Luyckx", voornaam: "Lieven", foto: UIImage(named: "guy1")!, adres: adres2, gpsCoordinaat: coordinaat2, telefoonnummer: "0478945784"))
+        
+        personen.append(Persoon(naam: "Meuris", voornaam: "Noa", foto: UIImage(named: "woman2")!, adres: adres3, gpsCoordinaat: coordinaat3, telefoonnummer: "0478945785"))
+        
+        personen.append(Persoon(naam: "Venstermans", voornaam: "Annie", foto: UIImage(named: "woman3")!, adres: adres4, gpsCoordinaat: coordinaat4, telefoonnummer: "0478945786"))
     }
 
     override func didReceiveMemoryWarning() {
@@ -53,7 +64,7 @@ class TableViewController: UITableViewController {
         let customCell = tableView.dequeueReusableCell(withIdentifier: "persoonCell", for: indexPath) as! TableViewCell
         
         let persoon = personen[indexPath.row]
-        customCell.naamLabel?.text = persoon.voornaam + " " + persoon.naam
+        customCell.naamLabel?.text = persoon.printVolledigeNaam()
         customCell.fotoImage.image = persoon.foto
         
         return customCell
@@ -95,14 +106,20 @@ class TableViewController: UITableViewController {
     }
     */
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "naarDetailView" {
+            if let nextVC = segue.destination as? ViewController {
+                nextVC.persoon = geselecteerdePersoon
+                print("persoon werd doorgestuurd")
+                //print(geselecteerdePersoon!.voornaam)
+            }
+        }
     }
-    */
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        geselecteerdePersoon = personen[indexPath.row]
+        performSegue(withIdentifier: "naarDetailView", sender: self)
+    }
 
 }

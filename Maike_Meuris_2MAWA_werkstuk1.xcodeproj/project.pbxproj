@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		691994EB20952EFA005D361F /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691994EA20952EFA005D361F /* TableViewController.swift */; };
 		691994EF20953098005D361F /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691994EE20953098005D361F /* TableViewCell.swift */; };
+		691994F1209546F6005D361F /* MyAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691994F0209546F6005D361F /* MyAnnotation.swift */; };
 		694211BE209523B100409550 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694211BD209523B100409550 /* AppDelegate.swift */; };
 		694211C0209523B100409550 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694211BF209523B100409550 /* ViewController.swift */; };
 		694211C3209523B100409550 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 694211C1209523B100409550 /* Main.storyboard */; };
@@ -17,12 +18,12 @@
 		694211CB209523B100409550 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 694211C9209523B100409550 /* LaunchScreen.storyboard */; };
 		694211D3209526B200409550 /* Persoon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694211D2209526B200409550 /* Persoon.swift */; };
 		694211D5209526FE00409550 /* Adres.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694211D4209526FE00409550 /* Adres.swift */; };
-		694211D72095286B00409550 /* Coordinaat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694211D62095286B00409550 /* Coordinaat.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		691994EA20952EFA005D361F /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		691994EE20953098005D361F /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		691994F0209546F6005D361F /* MyAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAnnotation.swift; sourceTree = "<group>"; };
 		694211BA209523B100409550 /* Maike_Meuris_2MAWA_werkstuk1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Maike_Meuris_2MAWA_werkstuk1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		694211BD209523B100409550 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		694211BF209523B100409550 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -33,7 +34,6 @@
 		694211CC209523B100409550 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		694211D2209526B200409550 /* Persoon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persoon.swift; sourceTree = "<group>"; };
 		694211D4209526FE00409550 /* Adres.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adres.swift; sourceTree = "<group>"; };
-		694211D62095286B00409550 /* Coordinaat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinaat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +68,7 @@
 			children = (
 				694211BD209523B100409550 /* AppDelegate.swift */,
 				694211BF209523B100409550 /* ViewController.swift */,
+				691994F0209546F6005D361F /* MyAnnotation.swift */,
 				694211C1209523B100409550 /* Main.storyboard */,
 				691994EA20952EFA005D361F /* TableViewController.swift */,
 				691994EE20953098005D361F /* TableViewCell.swift */,
@@ -76,7 +77,6 @@
 				694211CC209523B100409550 /* Info.plist */,
 				694211C4209523B100409550 /* Maike_Meuris_2MAWA_werkstuk1.xcdatamodeld */,
 				694211D2209526B200409550 /* Persoon.swift */,
-				694211D62095286B00409550 /* Coordinaat.swift */,
 				694211D4209526FE00409550 /* Adres.swift */,
 			);
 			path = Maike_Meuris_2MAWA_werkstuk1;
@@ -156,8 +156,8 @@
 			files = (
 				694211D5209526FE00409550 /* Adres.swift in Sources */,
 				691994EF20953098005D361F /* TableViewCell.swift in Sources */,
+				691994F1209546F6005D361F /* MyAnnotation.swift in Sources */,
 				691994EB20952EFA005D361F /* TableViewController.swift in Sources */,
-				694211D72095286B00409550 /* Coordinaat.swift in Sources */,
 				694211C6209523B100409550 /* Maike_Meuris_2MAWA_werkstuk1.xcdatamodeld in Sources */,
 				694211C0209523B100409550 /* ViewController.swift in Sources */,
 				694211D3209526B200409550 /* Persoon.swift in Sources */,
