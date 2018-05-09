@@ -202,7 +202,7 @@
                         <outlet property="mapView" destination="Wpy-Qh-NhY" id="Tg2-no-ovJ"/>
                         <outlet property="naamLabel" destination="itI-f2-6Zf" id="vuD-99-7ne"/>
                         <outlet property="telefoonnummerLabel" destination="4Jt-T0-Eh5" id="QA7-ik-GJx"/>
-                        <segue destination="gNk-z7-fu8" kind="show" identifier="naarFotoDetail" id="Op6-2z-PCU"/>
+                        <segue destination="gNk-z7-fu8" kind="show" identifier="naarFotoDetail" id="Nav-kX-1cZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ti7-4H-ZeC" userLabel="First Responder" sceneMemberID="firstResponder"/>
