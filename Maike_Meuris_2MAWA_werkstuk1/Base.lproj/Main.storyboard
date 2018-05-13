@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -153,7 +152,7 @@
                                     <constraint firstAttribute="height" constant="198" id="587-b1-smQ"/>
                                 </constraints>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="1TU-HW-WFe" appends="YES" id="ZlQ-Jz-LKG"/>
+                                    <outletCollection property="gestureRecognizers" destination="1TU-HW-WFe" appends="YES" id="zMX-rv-b6K"/>
                                 </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Naam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="itI-f2-6Zf">
@@ -202,13 +201,12 @@
                         <outlet property="mapView" destination="Wpy-Qh-NhY" id="Tg2-no-ovJ"/>
                         <outlet property="naamLabel" destination="itI-f2-6Zf" id="vuD-99-7ne"/>
                         <outlet property="telefoonnummerLabel" destination="4Jt-T0-Eh5" id="QA7-ik-GJx"/>
-                        <segue destination="gNk-z7-fu8" kind="show" identifier="naarFotoDetail" id="Nav-kX-1cZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ti7-4H-ZeC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="1TU-HW-WFe">
                     <connections>
-                        <action selector="imageClicked:" destination="Awa-Rn-9km" id="3hP-Oe-tNb"/>
+                        <segue destination="gNk-z7-fu8" kind="show" identifier="naarFotoDetail" id="wd0-Zr-jca"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

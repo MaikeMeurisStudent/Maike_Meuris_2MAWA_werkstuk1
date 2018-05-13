@@ -10,7 +10,10 @@ import UIKit
 
 class FotoDetailViewController: UIViewController {
     
-    // Bron: https:/stackoverflow.com/questions/29202882/how-do-you-make-an-uiimageview-on-the-storyboard-clickable-swift
+    /*
+    Bron:
+    https://stackoverflow.com/questions/29202882/how-do-you-make-an-uiimageview-on-the-storyboard-clickable-swift
+    */
     
     var doorgegevenFoto:UIImage?
 

@@ -11,8 +11,6 @@ import MapKit
 
 class MapViewController: UIViewController, MKMapViewDelegate {
     
-    var personen = [Persoon]()
-    
     @IBOutlet weak var mapView: MKMapView!
     
     var locationManager = CLLocationManager()
@@ -22,38 +20,13 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
-
         
-        let adres1 = Adres(straat: "Fontainasstraat", huisnummer: "12", postcode: "1060", gemeente: "Sint-Gillis")
-        let coordinaat1 = CLLocationCoordinate2D(latitude: 50.833038, longitude: 4.341547)
-        
-        let adres2 = Adres(straat: "Rue Émile Féron", huisnummer: "19", postcode: "1060", gemeente: "Sint-Gillis")
-        let coordinaat2 = CLLocationCoordinate2D(latitude: 50.833650, longitude: 4.340094)
-        
-        let adres3 = Adres(straat: "Chaussée de Forest", huisnummer: "24", postcode: "1060", gemeente: "Sint-Gillis")
-        let coordinaat3 = CLLocationCoordinate2D(latitude: 50.832263, longitude: 4.342198)
-        
-        let adres4 = Adres(straat: "Fontainasstraat", huisnummer: "7", postcode: "1060", gemeente: "Sint-Gillis")
-        let coordinaat4 = CLLocationCoordinate2D(latitude: 50.833128, longitude: 4.341987)
-        
-        personen.append(Persoon(naam: "Meuris", voornaam: "Maike", foto: UIImage(named: "woman1")!, adres: adres1, gpsCoordinaat: coordinaat1, telefoonnummer: "0478945783"))
-        
-        personen.append(Persoon(naam: "Luyckx", voornaam: "Lieven", foto: UIImage(named: "guy1")!, adres: adres2, gpsCoordinaat: coordinaat2, telefoonnummer: "0478945784"))
-        
-        personen.append(Persoon(naam: "Meuris", voornaam: "Noa", foto: UIImage(named: "woman2")!, adres: adres3, gpsCoordinaat: coordinaat3, telefoonnummer: "0478945785"))
-        
-        personen.append(Persoon(naam: "Venstermans", voornaam: "Annie", foto: UIImage(named: "woman3")!, adres: adres4, gpsCoordinaat: coordinaat4, telefoonnummer: "0478945786"))
-        
-        
-        
-        for persoon in personen{
+        // Annotations van personen in de array op de map toevoegen
+        for persoon in AppData.appData.personen{
             let titel = persoon.printVolledigeNaam()
-            
             let myAnnotation = MyAnnotation(coordinate: persoon.gpsCoordinaat, title: titel)
-            
             self.mapView.addAnnotation(myAnnotation)
         }
-        
         
     }
 
@@ -73,6 +46,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     }
     */
     
+    // Ook huidige locatie van de app-gebruiker op de map laten zien
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
         let center = CLLocationCoordinate2D(latitude: userLocation.coordinate.latitude, longitude: userLocation.coordinate.longitude)
         let span = MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)

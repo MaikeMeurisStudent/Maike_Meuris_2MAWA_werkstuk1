@@ -11,6 +11,7 @@ import MapKit
 
 class PersoonDetailViewController: UIViewController, MKMapViewDelegate {
     
+    // Als er op de foto van de persoon wordt geklikt, moet een segue worden getriggerd
     @IBAction func imageClicked(_ sender: Any) {
         performSegue(withIdentifier: "naarFotoDetail", sender: self)
     }
@@ -32,8 +33,8 @@ class PersoonDetailViewController: UIViewController, MKMapViewDelegate {
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
         
+        // Locatie van deze specifieke persoon op de map tonen
         let myAnnotation = MyAnnotation(coordinate: persoon!.gpsCoordinaat, title: "Huidige locatie")
-        
         self.mapView.addAnnotation(myAnnotation)
         
         let center = CLLocationCoordinate2D(latitude: mapView.annotations[0].coordinate.latitude, longitude: mapView.annotations[0].coordinate.longitude)
@@ -41,6 +42,7 @@ class PersoonDetailViewController: UIViewController, MKMapViewDelegate {
         let region = MKCoordinateRegion(center: center, span: span)
         mapView.setRegion(region, animated: true)
         
+        // Informatie over de persoon tonen
         naamLabel.text = persoon!.printVolledigeNaam()
         adresLabel.text = persoon!.adres.printAdres()
         telefoonnummerLabel.text = persoon!.telefoonnummer
@@ -53,6 +55,7 @@ class PersoonDetailViewController: UIViewController, MKMapViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    // Wanneer er op de foto wordt geklikt, moet de image-informatie worden meegestuurd naar de volgende view
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "naarFotoDetail" {
             if let nextVC = segue.destination as? FotoDetailViewController {

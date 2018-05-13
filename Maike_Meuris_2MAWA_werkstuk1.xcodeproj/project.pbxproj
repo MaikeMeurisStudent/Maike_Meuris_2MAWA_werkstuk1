@@ -12,6 +12,7 @@
 		691994F1209546F6005D361F /* MyAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691994F0209546F6005D361F /* MyAnnotation.swift */; };
 		691994F3209549CE005D361F /* FotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691994F2209549CE005D361F /* FotoDetailViewController.swift */; };
 		691994F520954E94005D361F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691994F420954E94005D361F /* MapViewController.swift */; };
+		691E5FF320A88C18009540C1 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691E5FF220A88C18009540C1 /* AppData.swift */; };
 		694211BE209523B100409550 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694211BD209523B100409550 /* AppDelegate.swift */; };
 		694211C0209523B100409550 /* PersoonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694211BF209523B100409550 /* PersoonDetailViewController.swift */; };
 		694211C3209523B100409550 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 694211C1209523B100409550 /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 		691994F0209546F6005D361F /* MyAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAnnotation.swift; sourceTree = "<group>"; };
 		691994F2209549CE005D361F /* FotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotoDetailViewController.swift; sourceTree = "<group>"; };
 		691994F420954E94005D361F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		691E5FF220A88C18009540C1 /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		694211BA209523B100409550 /* Maike_Meuris_2MAWA_werkstuk1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Maike_Meuris_2MAWA_werkstuk1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		694211BD209523B100409550 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		694211BF209523B100409550 /* PersoonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersoonDetailViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				694211BD209523B100409550 /* AppDelegate.swift */,
 				694211BF209523B100409550 /* PersoonDetailViewController.swift */,
 				691994F2209549CE005D361F /* FotoDetailViewController.swift */,
+				691E5FF220A88C18009540C1 /* AppData.swift */,
 				691994F420954E94005D361F /* MapViewController.swift */,
 				691994F0209546F6005D361F /* MyAnnotation.swift */,
 				694211C1209523B100409550 /* Main.storyboard */,
@@ -164,6 +167,7 @@
 				691994EF20953098005D361F /* TableViewCell.swift in Sources */,
 				691994F1209546F6005D361F /* MyAnnotation.swift in Sources */,
 				691994F520954E94005D361F /* MapViewController.swift in Sources */,
+				691E5FF320A88C18009540C1 /* AppData.swift in Sources */,
 				691994EB20952EFA005D361F /* TableViewController.swift in Sources */,
 				691994F3209549CE005D361F /* FotoDetailViewController.swift in Sources */,
 				694211C6209523B100409550 /* Maike_Meuris_2MAWA_werkstuk1.xcdatamodeld in Sources */,
